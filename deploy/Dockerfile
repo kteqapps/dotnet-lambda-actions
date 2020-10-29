@@ -5,8 +5,8 @@ LABEL "com.github.actions.description"="Run dotnet lambda deploy"
 LABEL "com.github.actions.icon"="play-circle"
 LABEL "com.github.actions.color"="purple"
 
-LABEL "repository"="https://github.com/evalytica/dotnet-lambda-actions"
-LABEL "homepage"="https://github.com/evalytica/dotnet-lambda-actions"
+LABEL "repository"="https://github.com/Forevka/dotnet-lambda-actions"
+LABEL "homepage"="https://github.com/Forevka/dotnet-lambda-actions"
 LABEL "maintainer"="Veradigm Life Sciences DevOps Team <evalytica-development@allscripts.com>"
 
 RUN apt-get update && \
