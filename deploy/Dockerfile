@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:3.1.301-sdk
+FROM microsoft/dotnet:3.1-sdk
 
 LABEL "com.github.actions.name"="dotnet lambda deploy"
 LABEL "com.github.actions.description"="Run dotnet lambda deploy"
