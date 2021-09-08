@@ -18,10 +18,10 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - name: Use .NET 2.1
+    - name: Use .NET 3.1
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 2.1.500
+        dotnet-version: 3.1
 
     - name: .NET Lambda build and deploy
       uses: evalytica/dotnet-lambda-actions/deploy@v0.1.0
@@ -32,7 +32,6 @@ jobs:
         DOTNET_LAMBDA_PACKAGE_NAME: latest.zip
         DOTNET_LAMBDA_FUNCTION_HANDLER: Host::MyLambdaDomain.Host.LambdaEntryPoint::FunctionHandlerAsync
         DOTNET_LAMBDA_FUNCTION_NAME: my-lambda-function-name
-        DOTNET_LAMBDA_S3_LOCATION: my-lambda-builds-bucket/my-lambda-function-name
         DOTNET_LAMBDA_WORKING_DIR: ./src
 ```
 
@@ -46,7 +45,6 @@ Given:
 * `AWS_ACCESS_KEY_ID` & `AWS_SECRET_ACCESS_KEY`: AWS credentials
 * `AWS_REGION`: AWS region *(default: us-east-1)*
 * `DOTNET_LAMBDA_PACKAGE_NAME`: Filename to use for zipped package archive. *(default: latest.zip)*
-* `DOTNET_LAMBDA_S3_LOCATION`: S3 bucket/key to upload package archive to *(example: <bucket_name>/<key/folder>)*
 * `DOTNET_LAMBDA_FUNCTION_NAME`: Lambda function name
 * `DOTNET_LAMBDA_FUNCTION_HANDLER`: Lambda function handler
 
